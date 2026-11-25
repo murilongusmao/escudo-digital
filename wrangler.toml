@@ -1,4 +1,5 @@
 name = "escudo-digital"
+account_id = "13444997198afc45b48970e106ce15fc"
 main = "worker.js"
 compatibility_date = "2025-01-01"
 
