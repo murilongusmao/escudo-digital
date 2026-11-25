@@ -1,0 +1,12 @@
+.git
+.github
+.nojekyll
+functions
+node_modules
+package.json
+package-lock.json
+README.md
+server.js
+worker.js
+wrangler.toml
+.assetsignore

@@ -1,8 +1,7 @@
-name: "escudo-digital"
+name = "escudo-digital"
+main = "worker.js"
 compatibility_date = "2025-01-01"
-pages_build_output_dir = "."
 
-# Para ativar o Cloudflare Workers AI gratuitamente no Cloudflare Pages,
-# descomente as duas linhas abaixo ou adicione o binding "AI" no painel do Cloudflare Pages:
-# [ai]
-# binding = "AI"
+[assets]
+directory = "."
+binding = "ASSETS"
