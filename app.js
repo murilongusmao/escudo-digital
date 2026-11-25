@@ -251,7 +251,7 @@
   }
 
   function initTheme() {
-    const savedTheme = localStorage.getItem('ed_theme') || 'dark';
+    const savedTheme = localStorage.getItem('ed_theme_v2') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcons(savedTheme);
   }
@@ -290,11 +290,19 @@
   function bindEvents() {
     // Alternar Tema
     els.btnToggleTheme.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
       const next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('ed_theme', next);
+      localStorage.setItem('ed_theme_v2', next);
       updateThemeIcons(next);
+    });
+
+    // Barra de navegação mobile inferior
+    document.querySelectorAll('.mob-nav-item[data-nav]').forEach((navItem) => {
+      navItem.addEventListener('click', () => {
+        document.querySelectorAll('.mob-nav-item').forEach((n) => n.classList.remove('active'));
+        navItem.classList.add('active');
+      });
     });
 
     // Abas de Categoria
@@ -971,10 +979,11 @@ Responda ESTRITAMENTE em JSON válido com as chaves:
     els.resultContent.classList.add('hidden');
     els.loadingState.classList.remove('hidden');
 
-    // Rola suavemente para o resultado em telas de celular
-    if (window.innerWidth < 960) {
-      document.getElementById('secResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    // Rola suavemente para o resultado no app mobile e destaca aba Resultado
+    document.getElementById('secResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelectorAll('.mob-nav-item').forEach((n) => {
+      n.classList.toggle('active', n.getAttribute('data-nav') === 'secResults');
+    });
 
     // Executa análise heurística imediata
     const result = analyzeHeuristics(rawText, state.category, state.channel, profileFlags);

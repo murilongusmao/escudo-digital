@@ -1,12 +1,12 @@
 {
-  "name": "Escudo Digital - Detector de Golpes e Vírus",
+  "name": "Escudo Digital - App Mobile Anti-Golpes",
   "short_name": "Escudo Digital",
-  "description": "Analise links, conversas, perfis de redes sociais e ofertas suspeitas com heurística de cibersegurança e Inteligência Artificial.",
+  "description": "Aplicativo mobile para analisar links, conversas, perfis de redes sociais e ofertas suspeitas com Inteligência Artificial.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#0b1120",
-  "theme_color": "#10b981",
-  "orientation": "portrait-primary",
+  "background_color": "#f8fafc",
+  "theme_color": "#059669",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "./assets/shield-icon.svg",

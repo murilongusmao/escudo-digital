@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <meta name="theme-color" content="#0f172a" />
-  <meta name="description" content="Escudo Digital: Detector inteligente de golpes, vírus, links falsos, conversas suspeitas e perfis fraudulentos em redes sociais com apoio de IA." />
-  <title>Escudo Digital | Detector Inteligente de Golpes & Vírus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8fafc" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="description" content="Escudo Digital: Aplicativo mobile inteligente contra golpes, vírus, links falsos, conversas suspeitas e perfis fraudulentos." />
+  <title>Escudo Digital | App Mobile Anti-Golpes</title>
   <link rel="manifest" href="./manifest.json" />
   <link rel="icon" type="image/svg+xml" href="./assets/shield-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,11 +46,11 @@
         </button>
 
         <button type="button" id="btnToggleTheme" class="btn-icon" aria-label="Alternar tema claro ou escuro" title="Alternar tema">
-          <svg id="iconSun" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg id="iconSun" class="icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"/>
             <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
           </svg>
-          <svg id="iconMoon" class="icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg id="iconMoon" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
         </button>
@@ -58,28 +60,28 @@
 
   <!-- Main Workspace -->
   <main class="container main-layout">
-    <!-- Hero Banner (Compact on mobile, rich on desktop) -->
+    <!-- Hero Banner (Mobile Compact) -->
     <section class="hero-card">
       <div class="hero-content">
         <div class="hero-badge">
           <span class="pulse-dot"></span>
-          <span>Verificação em Tempo Real • Celular & Computador</span>
+          <span>Proteção Mobile em Tempo Real</span>
         </div>
         <h1>Em dúvida se é <span class="gradient-text">golpe ou vírus</span>?</h1>
-        <p>Cole um link suspeito, uma mensagem de WhatsApp/SMS, dados de um perfil de loja nas redes sociais ou código PIX. Analisamos os riscos na hora e mostramos como se proteger.</p>
+        <p>Cole um link suspeito, conversa de WhatsApp/SMS, perfil de loja ou PIX. Analisamos o risco na hora no seu celular.</p>
       </div>
       <div class="hero-stats">
         <div class="stat-pill">
           <strong>+45</strong>
-          <span>Padrões de Golpes</span>
+          <span>Golpes</span>
         </div>
         <div class="stat-pill">
-          <strong>URL & APK</strong>
-          <span>Scanner de Vírus</span>
+          <strong>URL/APK</strong>
+          <span>Anti-Vírus</span>
         </div>
         <div class="stat-pill">
-          <strong>IA + Regras</strong>
-          <span>Dupla Validação</span>
+          <strong>IA Ativa</strong>
+          <span>Validação</span>
         </div>
       </div>
     </section>
