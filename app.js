@@ -14,7 +14,11 @@
     channel: 'Qualquer canal',
     aiConfig: {
       mode: localStorage.getItem('ed_ai_mode') || 'auto',
-      cfEndpoint: localStorage.getItem('ed_cf_endpoint') || '/api/analyze',
+      cfEndpoint:
+        localStorage.getItem('ed_cf_endpoint') ||
+        (window.location.hostname.endsWith('github.io')
+          ? 'https://escudo-digital.fan-gram-5bc.workers.dev/api/analyze'
+          : '/api/analyze'),
       geminiKey: localStorage.getItem('ed_gemini_key') || ''
     },
     lastResult: null,
